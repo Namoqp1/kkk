@@ -1,6 +1,6 @@
 print("start")
 print("next")
-print("new13")
+print("new14")
 
 local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucas-Lua/ui/main/m"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/barlossxi/barlossxi/main/ZAZA.lua"))()
@@ -430,6 +430,7 @@ local ez = Storeone:AddDropdown("Select Store", {
 	Default = _G.SelectedStore,
 	Callback = function(ezs)
 		_G.SelectedStore = ezs
+  print(_G.SelectedStore)
 	end
 })
 

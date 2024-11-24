@@ -451,7 +451,7 @@ spawn(function()
 				local Continuebro = false
 				for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
 					if v:IsA("Tool") then
-						if v.Name:lower():find(_G.SelectedStore) then 
+						if v.Name == _G.SelectedStore then 
 							game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
 							Continuebro = true
 							break
@@ -461,7 +461,7 @@ spawn(function()
 				task.wait(0.01)
 				for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
 					if v:IsA("Tool") then 
-						if v.Name:lower():find(_G.SelectedStore) then 
+						if v.Name == _G.SelectedStore then 
 							repeat task.wait()
 								game:GetService("VirtualUser"):CaptureController()
 								game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
